@@ -1,12 +1,9 @@
-import { UploadOutlined, UserOutlined, VideoCameraOutlined, SketchOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme, Button, Typography } from 'antd';
+import { UploadOutlined, UserOutlined, VideoCameraOutlined, SketchOutlined, BankOutlined, LinkOutlined, PieChartOutlined, UnorderedListOutlined } from '@ant-design/icons';
+import { Layout, Menu, Button, Typography } from 'antd';
 import React from 'react';
 const { Content, Sider } = Layout;
 const { Text, Title } = Typography;
 const App = () => {
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
   return (
     <Layout>
       <Sider
@@ -39,13 +36,13 @@ const App = () => {
       <Layout>
         <Content
           style={{
-            margin: '24px 16px 0',
+            margin: '0px 16px 0',
           }}
         >
           <div
             style={{
               padding: 24,
-              background: colorBgContainer,
+              backgroundColor: 'rgb(240 241 241)',
 
             }}
           >
@@ -64,35 +61,65 @@ const App = () => {
               </Button>
             </div>
             {/* Inviation */}
-            <div style={{
-              border: '1px solid black',
-              borderRadius: '5px',
-              backgroundColor: 'blue',
-              padding:'15px 0px 15px 8px',
-              display: 'flex',
-              alignItems:'center',
-            }}>
+            <div className='invitation'>
               <div>
-                {<SketchOutlined style={{
-                  fontSize: '38px',
-                  borderRadius: '50%',
-                  padding: 17,
-                  color: 'blue',
-                  backgroundColor: 'white',
-                  marginRight:'7px'
-                }} />}
+                {<SketchOutlined className='icon-invite' />}
               </div>
 
               <div>
-                <Title level={5} style={{color:'white',marginBottom:'0px',marginTop:'0px'}}>YOU HAVE BEEN INVITED</Title>
-                <Text style={{color:'white',fontSize:'16px'}}>You have been invited to participate in the compaign for Platinum credit card.<br></br>
+                <Title level={5} className='step-title' style={{ color: 'white' }}>YOU HAVE BEEN INVITED</Title>
+                <Text style={{ color: 'white', fontSize: '16px' }}>You have been invited to participate in the compaign for Platinum credit card.<br></br>
                   Please connect a bank to start with the service.</Text>
               </div>
             </div>
             <Text style={{
-              fontSize:'16px',
-            }}>YOU'RE ALMOST THERE</Text>
-            
+              fontSize: '16px',
+            }}>YOU'RE ALMOST THERE</Text><br></br>
+            <Button className='btn-step'>Step 1</Button>
+
+            <div className='step-1'>
+              <div className='steps'>
+                <div>
+                  {<BankOutlined className='icon-step1' />}
+                </div>
+
+                <div>
+                  <Title level={5} className='step-title'>CONNECT YOUR BANK</Title>
+                  <Text style={{ fontSize: '16px' }}>Connect atleast 1 bank to start utilizing the open bank services</Text>
+                </div>
+              </div>
+              <Button className='btn-bank'><LinkOutlined style={{ fontSize: '22px' }} />Connect a Bank</Button>
+            </div>
+
+            <Button className='btn-step'>Step 2</Button>
+
+            <div className='step2-3'>
+              <div className='steps'>
+                <div>
+                  {<PieChartOutlined className='icon-bg' />}
+                </div>
+
+                <div>
+                  <Title level={5} className='step-title'>VIEW ANALYTICAL PROFILE</Title>
+                  <Text style={{ fontSize: '16px' }}>Once your bank is connected you can view your analytical profile</Text>
+                </div>
+              </div>
+            </div>
+
+            <Button className='btn-step'>Step 3</Button>
+
+            <div className='step2-3'>
+              <div className='steps'>
+                <div>
+                  {<UnorderedListOutlined className='icon-bg' />}
+                </div>
+
+                <div>
+                  <Title level={5} className='step-title'>MANAGE YOU CONSENT AND VIEW FINANCIAL DATA</Title>
+                  <Text style={{ fontSize: '16px' }}>You can also manage your bank account consent and view financial data</Text>
+                </div>
+              </div>
+            </div>
           </div>
         </Content>
       </Layout>
