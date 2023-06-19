@@ -49,6 +49,8 @@ const App = () => {
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
+              flexWrap:'wrap',
+              marginBottom:'5px'
             }}>
               <Title level={2}>DashBoard</Title>
               <Button

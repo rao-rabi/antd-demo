@@ -44,6 +44,7 @@ body .step-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body .icon-step1 {
