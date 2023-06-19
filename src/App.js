@@ -34,11 +34,7 @@ const App = () => {
         />
       </Sider>
       <Layout>
-        <Content
-          style={{
-            margin: '0px 16px 0',
-          }}
-        >
+        <Content>
           <div
             style={{
               padding: 24,
@@ -62,7 +58,9 @@ const App = () => {
               >Moath Muhammad
               </Button>
             </div>
+
             {/* Inviation */}
+
             <div className='invitation'>
               <div>
                 {<SketchOutlined className='icon-invite' />}
@@ -74,9 +72,15 @@ const App = () => {
                   Please connect a bank to start with the service.</Text>
               </div>
             </div>
+
             <Text style={{
               fontSize: '16px',
             }}>YOU'RE ALMOST THERE</Text><br></br>
+
+            {/* steps */}
+
+            {/* step-1 */}
+
             <Button className='btn-step'>Step 1</Button>
 
             <div className='step-1'>
@@ -90,8 +94,10 @@ const App = () => {
                   <Text style={{ fontSize: '16px' }}>Connect atleast 1 bank to start utilizing the open bank services</Text>
                 </div>
               </div>
-              <Button className='btn-bank'><LinkOutlined style={{ fontSize: '22px' }} />Connect a Bank</Button>
+              <Button className='btn-bank'><LinkOutlined style={{ fontSize: '20px' }} />Connect a Bank</Button>
             </div>
+
+              {/* step-2 */}
 
             <Button className='btn-step'>Step 2</Button>
 
@@ -107,6 +113,8 @@ const App = () => {
                 </div>
               </div>
             </div>
+
+              {/* step-3 */}
 
             <Button className='btn-step'>Step 3</Button>
 

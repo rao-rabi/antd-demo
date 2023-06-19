@@ -12,14 +12,7 @@ code {
     monospace;
 }
 
-body .icon-invite {
-  font-size: 38px;
-  border-radius: 50%;
-  padding: 17px;
-  color: #6e97dd;
-  background-color: white;
-  margin-right: 7px;
-}
+/* Invitation */
 
 body .invitation {
   border: 1px solid black;
@@ -31,10 +24,28 @@ body .invitation {
   margin-bottom: 10px;
 }
 
+body .icon-invite {
+  font-size: 38px;
+  border-radius: 50%;
+  padding: 17px;
+  color: #6e97dd;
+  background-color: white;
+  margin-right: 7px;
+}
+
+/* steps */
+
 body .steps {
   display: flex;
   align-items: center;
 }
+
+body .step-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* step 1 */
 
 body .step-1 {
   margin: 15px 20px 15px 20px;
@@ -62,10 +73,7 @@ body .btn-bank {
   margin-right: 15px;
 }
 
-body .step-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+/* step-2 step-2 */
 
 body .step2-3 {
   margin: 15px 20px 15px 20px;
@@ -93,4 +101,23 @@ body .icon-bg {
   color: "#6e97dd";
   background-color: rgb(216, 215, 215);
   margin: 7px 12px 7px 8px;
+}
+
+/* responsiveness */
+
+@media only screen and (max-width: 892px) {
+  body .step-1 {
+    margin: 15px 0px 15px 0px;
+    padding: 2%;
+  }
+  body .step2-3{
+    margin: 15px 0px 15px 0px;
+    padding: 2%;
+  }
+
+body .btn-bank {
+  padding: 2px 8px 30px 8px;
+  margin-left: 80px;
+  font-size: 15px;
+}
 }
